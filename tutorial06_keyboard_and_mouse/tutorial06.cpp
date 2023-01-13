@@ -17,6 +17,7 @@ using namespace glm;
 #include <common/shader.hpp>
 #include <common/texture.hpp>
 #include <common/controls.hpp>
+#include <common/axes.hpp>
 
 int main( void )
 {
@@ -180,6 +181,8 @@ int main( void )
 	glBindBuffer(GL_ARRAY_BUFFER, uvbuffer);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(g_uv_buffer_data), g_uv_buffer_data, GL_STATIC_DRAW);
 
+	initAxes();
+
 	do{
 
 		// Clear the screen
@@ -234,6 +237,8 @@ int main( void )
 
 		glDisableVertexAttribArray(0);
 		glDisableVertexAttribArray(1);
+
+		drawAxes(MVP);
 
 		// Swap buffers
 		glfwSwapBuffers(window);

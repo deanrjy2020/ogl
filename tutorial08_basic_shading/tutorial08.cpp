@@ -20,6 +20,7 @@ using namespace glm;
 #include <common/controls.hpp>
 #include <common/objloader.hpp>
 #include <common/vboindexer.hpp>
+#include <common/axes.hpp>
 
 int main( void )
 {
@@ -121,6 +122,8 @@ int main( void )
 	glUseProgram(programID);
 	GLuint LightID = glGetUniformLocation(programID, "LightPosition_worldspace");
 
+	initAxes();
+
 	do{
 
 		// Clear the screen
@@ -193,6 +196,8 @@ int main( void )
 		glDisableVertexAttribArray(0);
 		glDisableVertexAttribArray(1);
 		glDisableVertexAttribArray(2);
+
+		drawAxes(MVP);
 
 		// Swap buffers
 		glfwSwapBuffers(window);

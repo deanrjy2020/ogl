@@ -1,0 +1,62 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "(gdb) Launch",
+				"type": "cppdbg",
+				"request": "launch",
+				// 01
+				// "program": "${workspaceFolder}/tutorial01_first_window/program.exe",
+				// 02
+				// "program": "${workspaceFolder}/tutorial02_red_triangle/program.exe",
+				// "cwd": "${workspaceFolder}/tutorial02_red_triangle",
+				// 03
+				// "program": "${workspaceFolder}/tutorial03_matrices/program.exe",
+				// "cwd": "${workspaceFolder}/tutorial03_matrices",
+				// 04
+				// "program": "${workspaceFolder}/tutorial04_colored_cube/program.exe",
+				// "cwd": "${workspaceFolder}/tutorial04_colored_cube",
+				// 05
+				// "program": "${workspaceFolder}/tutorial05_textured_cube/program.exe",
+				// "cwd": "${workspaceFolder}/tutorial05_textured_cube",
+				// 06
+				// omitted
+				// 07
+				// 08
+				// 09
+				// 10
+				// 11
+				// 12
+				"program": "${workspaceFolder}/tutorial12_extensions/program.exe",
+				"cwd": "${workspaceFolder}/tutorial12_extensions",
+				"args": [],
+				"stopAtEntry": false,
+				"environment": [
+					// Somehow this is not working. put the 2 paths to the PATH of Windows for WAR.
+					// {
+					// 	"name": "LD_LIBRARY_PATH",
+					// 	"value": "${workspaceFolder}/dean/glfw-3.3.8.bin.WIN64/lib-mingw-w64:${workspaceFolder}/dean/glew-2.1.0/bin/Release/x64"
+					// }
+				],
+				"externalConsole": false,
+				"MIMode": "gdb",
+				// if running into issue, restart the vsc.
+				"miDebuggerPath": "C:/mingw64/bin/gdb.exe",
+				"setupCommands": [
+					{
+						"description": "Enable pretty-printing for gdb",
+						"text": "-enable-pretty-printing",
+						"ignoreFailures": true
+					}
+				]
+			},
+		]
+	}
+}

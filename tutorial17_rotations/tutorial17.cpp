@@ -95,8 +95,8 @@ int main( void )
  
 	// Set GLFW event callbacks. I removed glfwSetWindowSizeCallback for conciseness
 	glfwSetMouseButtonCallback(window, (GLFWmousebuttonfun)TwEventMouseButtonGLFW); // - Directly redirect GLFW mouse button events to AntTweakBar
-	glfwSetCursorPosCallback(window, (GLFWcursorposfun)TwEventMousePosGLFW);          // - Directly redirect GLFW mouse position events to AntTweakBar
-	glfwSetScrollCallback(window, (GLFWscrollfun)TwEventMouseWheelGLFW);    // - Directly redirect GLFW mouse wheel events to AntTweakBar
+	//glfwSetCursorPosCallback(window, (GLFWcursorposfun)TwEventMousePosGLFW);          // - Directly redirect GLFW mouse position events to AntTweakBar
+	//glfwSetScrollCallback(window, (GLFWscrollfun)TwEventMouseWheelGLFW);    // - Directly redirect GLFW mouse wheel events to AntTweakBar
 	glfwSetKeyCallback(window, (GLFWkeyfun)TwEventKeyGLFW);                         // - Directly redirect GLFW key events to AntTweakBar
 	glfwSetCharCallback(window, (GLFWcharfun)TwEventCharGLFW);                      // - Directly redirect GLFW char events to AntTweakBar
  
@@ -261,7 +261,7 @@ int main( void )
  
 		{ // Euler
  
-			// As an example, rotate arount the vertical axis at 180°/sec
+			// As an example, rotate arount the vertical axis at 180ï¿½/sec
 			gOrientation1.y += 3.14159f/2.0f * deltaTime;
  
 			// Build the model matrix
